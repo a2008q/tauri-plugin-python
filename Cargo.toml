@@ -1,6 +1,6 @@
 [package]
 name = "tauri-plugin-python"
-version = "0.3.6"
+version = "0.3.7"
 authors = [ "Marco Mengelkoch" ]
 description = "A tauri 2 plugin to use python code in the backend."
 keywords = ["rust", "python", "tauri", "gui"]
@@ -19,9 +19,10 @@ thiserror = "2"
 lazy_static = "1.5.0"
 pyo3 = { version = "0.23.3", features=["auto-initialize", "generate-import-lib"], optional = true }
 rustpython-pylib = { version = "0.4.0" }
-rustpython-stdlib = { version = "0.4.0", features = ["threading"] }
+rustpython-stdlib = { version = "0.4.0", features = ["threading","stdlib"] }
 rustpython-vm = { version = "0.4.0", features = [
     "importlib",
+    "stdlib",
     "serde",
     "threading",
 ] }
